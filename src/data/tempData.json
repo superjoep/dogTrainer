@@ -1,5 +1,5 @@
 {
-  "puppy_training_courses": [
+  "puppyTrainingCourses": [
     {
       "id": "1",
       "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
@@ -51,22 +51,23 @@
   ],
   "lessons": [
     {
-      "lessonID": "1",
+      "id": "1",
       "category": "Potty Training",
-      "LessonPart": [
+      "lessonPart": [
         {
           "lessonPartID": "1",
-          "partType": "text",
           "title": "Establishing a Potty Spot",
           "lessonInfo": [
             {
               "partID": "0",
+              "partType": "text",
               "title": "Explanation:",
               "text": "Dogs thrive on routine, so one of the most effective methods to begin potty training is to establish a specific spot where your dog can go. This reinforces consistency and teaches them that there’s a designated area for relieving themselves."
             },
             {
               "partID": "1",
               "partType": "list",
+              "title": "Step-by-Step Guide:",
               "list": [
                 {
                   "step": "Choose a potty area outside, ideally a spot away from where the dog plays."
@@ -86,8 +87,8 @@
               ]
             }
           ],
-          "Tip": "Bring a toy or chew to the potty spot so your dog feels relaxed. This can help speed up the process.",
-          "Warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
+          "tip": "Bring a toy or chew to the potty spot so your dog feels relaxed. This can help speed up the process.",
+          "warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
         },
         {
           "lessonPartID": "2",
@@ -104,34 +105,10 @@
               "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
             }
           ],
-          "Warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
-        }
-      ]
-    },
-
-    {
-      "lessonID": "2",
-      "category": "Basic Obedience",
-      "LessonPart": [
-        {
-          "lessonPartID": "1",
-          "title": "test",
-          "lessonInfo": [
-            {
-              "partID": "1",
-              "title": "Teach your dog to focus",
-              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
-            },
-            {
-              "partID": "1",
-              "title": "Teach your dog to focus",
-              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
-            }
-          ],
-          "Warning": "test"
+          "warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
         },
         {
-          "lessonPartID": "2",
+          "lessonPartID": "3",
           "title": "test",
           "lessonInfo": [
             {
@@ -145,7 +122,7 @@
               "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
             }
           ],
-          "Warning": "test"
+          "warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
         }
       ]
     }

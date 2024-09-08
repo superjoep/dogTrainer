@@ -9,13 +9,8 @@
         </ion-toolbar>
       </ion-header>
       <div class="grid font-bold text-2xl mt-5">Pick a training</div>
-      <div v-for="item in jsonData.puppy_training_courses">
-        <trainingComp
-          :title="item.title"
-          :description="item.description"
-          :img="item.img"
-          :id="item.id"
-        />
+      <div v-for="item in jsonData.puppyTrainingCourses">
+        <trainingComp :data="item" />
       </div>
     </ion-content>
   </ion-page>
@@ -30,6 +25,6 @@ import {
   IonPage,
   IonToolbar,
 } from "@ionic/vue";
-import trainingComp from "../comps/trainingComp.vue";
-import jsonData from "../data/tempData.json";
+import trainingComp from "@/components/trainingComp.vue";
+import jsonData from "@/data/tempData.json";
 </script>
