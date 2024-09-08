@@ -1,0 +1,153 @@
+{
+  "puppy_training_courses": [
+    {
+      "id": "1",
+      "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
+      "title": "Potty Training",
+      "description": "Teach your puppy where and when to go to the bathroom using a consistent routine and positive reinforcement."
+    },
+    {
+      "id": "2",
+      "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
+      "title": "Basic Obedience",
+      "description": "Introduce fundamental commands such as 'sit', 'stay', 'come', and 'down' to help your puppy follow instructions."
+    },
+    {
+      "id": "3",
+      "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
+      "title": "Crate Training",
+      "description": "Train your puppy to feel comfortable and secure in a crate, making it a safe space for them."
+    },
+    {
+      "id": "4",
+      "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
+      "title": "Leash Training",
+      "description": "Teach your puppy to walk on a leash without pulling, creating a pleasant walking experience for both you and your dog."
+    },
+    {
+      "id": "5",
+      "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
+      "title": "Socialization",
+      "description": "Expose your puppy to different environments, people, and dogs to build confidence and reduce fear in new situations."
+    },
+    {
+      "id": "6",
+      "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
+      "title": "Bite Inhibition",
+      "description": "Help your puppy control their biting and chewing habits by teaching them how to be gentle with their mouth."
+    },
+    {
+      "id": "7",
+      "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
+      "title": "Handling and Grooming",
+      "description": "Accustom your puppy to being handled for grooming tasks such as brushing, nail trimming, and vet visits."
+    },
+    {
+      "id": "8",
+      "img": "https://www.shutterstock.com/image-vector/funny-people-playing-dogs-playground-600nw-1408450514.jpg",
+      "title": "Recall Training",
+      "description": "Train your puppy to reliably come when called, ensuring they respond quickly in different environments and situations."
+    }
+  ],
+  "lessons": [
+    {
+      "lessonID": "1",
+      "category": "Potty Training",
+      "LessonPart": [
+        {
+          "lessonPartID": "1",
+          "partType": "text",
+          "title": "Establishing a Potty Spot",
+          "lessonInfo": [
+            {
+              "partID": "0",
+              "title": "Explanation:",
+              "text": "Dogs thrive on routine, so one of the most effective methods to begin potty training is to establish a specific spot where your dog can go. This reinforces consistency and teaches them that there’s a designated area for relieving themselves."
+            },
+            {
+              "partID": "1",
+              "partType": "list",
+              "list": [
+                {
+                  "step": "Choose a potty area outside, ideally a spot away from where the dog plays."
+                },
+                {
+                  "step": "Bring your dog to the potty area immediately after meals, naps, or play sessions."
+                },
+                {
+                  "step": "Use a command like 'Go Potty' every time you take them there."
+                },
+                {
+                  "step": "Wait patiently and avoid distractions."
+                },
+                {
+                  "step": "Praise and reward them with a treat when they go potty in the right spot."
+                }
+              ]
+            }
+          ],
+          "Tip": "Bring a toy or chew to the potty spot so your dog feels relaxed. This can help speed up the process.",
+          "Warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
+        },
+        {
+          "lessonPartID": "2",
+          "title": "test",
+          "lessonInfo": [
+            {
+              "partID": "0",
+              "title": "Teach your dog to focus",
+              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+            },
+            {
+              "partID": "1",
+              "title": "Teach your dog to focus",
+              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+            }
+          ],
+          "Warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
+        }
+      ]
+    },
+
+    {
+      "lessonID": "2",
+      "category": "Basic Obedience",
+      "LessonPart": [
+        {
+          "lessonPartID": "1",
+          "title": "test",
+          "lessonInfo": [
+            {
+              "partID": "1",
+              "title": "Teach your dog to focus",
+              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+            },
+            {
+              "partID": "1",
+              "title": "Teach your dog to focus",
+              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+            }
+          ],
+          "Warning": "test"
+        },
+        {
+          "lessonPartID": "2",
+          "title": "test",
+          "lessonInfo": [
+            {
+              "partID": "0",
+              "title": "Teach your dog to focus",
+              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+            },
+            {
+              "partID": "1",
+              "title": "Teach your dog to focus",
+              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+            }
+          ],
+          "Warning": "test"
+        }
+      ]
+    }
+  ]
+}
