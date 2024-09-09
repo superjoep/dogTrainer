@@ -53,16 +53,18 @@
     {
       "id": "1",
       "category": "Potty Training",
+      "finished": false,
       "lessonPart": [
         {
           "lessonPartID": "1",
-          "title": "Establishing a Potty Spot",
+          "title": "Introduction to Potty Training",
+          "finished": false,
           "lessonInfo": [
             {
               "partID": "0",
               "partType": "text",
               "title": "Explanation:",
-              "text": "Dogs thrive on routine, so one of the most effective methods to begin potty training is to establish a specific spot where your dog can go. This reinforces consistency and teaches them that there’s a designated area for relieving themselves."
+              "text": "In this lesson, you’ll introduce your dog to a designated potty area. Consistency is key for building a routine and making sure your dog associates this spot with doing its business."
             },
             {
               "partID": "1",
@@ -92,36 +94,107 @@
         },
         {
           "lessonPartID": "2",
-          "title": "test",
+          "title": "Establishing a Routine",
+          "finished": false,
           "lessonInfo": [
             {
               "partID": "0",
-              "title": "Teach your dog to focus",
-              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+              "partType": "text",
+              "title": "Explanation:",
+              "text": "Dogs thrive on routine, so one of the most effective methods to begin potty training is to establish a specific spot where your dog can go. This reinforces consistency and teaches them that there’s a designated area for relieving themselves."
             },
             {
               "partID": "1",
-              "title": "Teach your dog to focus",
-              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+              "partType": "list",
+              "title": "Step-by-Step Guide:",
+              "list": [
+                {
+                  "step": "Create a schedule that includes taking your dog out first thing in the morning, after meals, after naps, and before bedtime."
+                },
+                {
+                  "step": "Stick to the same potty command (e.g., 'Go Potty')."
+                },
+                {
+                  "step": "Gradually extend the time between potty breaks as your dog starts to understand the routine."
+                },
+                {
+                  "step": "Always praise your dog after successful potty trips to reinforce the behavior."
+                }
+              ]
             }
           ],
+          "tip": "Bring a toy or chew to the potty spot so your dog feels relaxed. This can help speed up the process.",
           "warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
         },
         {
           "lessonPartID": "3",
-          "title": "test",
+          "title": "Crate Training to Aid Potty Training",
+          "finished": false,
           "lessonInfo": [
             {
               "partID": "0",
-              "title": "Teach your dog to focus",
-              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+              "partType": "text",
+              "title": "Explanation:",
+              "text": "Crate training can be a great tool for potty training. Dogs naturally avoid soiling their sleeping area, which helps teach them bladder control."
             },
             {
               "partID": "1",
-              "title": "Teach your dog to focus",
-              "text": "This is a great way to teach your dog to focus on you, it's also useful when you want to get their attention"
+              "partType": "list",
+              "title": "Step-by-Step Guide:",
+              "list": [
+                {
+                  "step": "Select a crate that is large enough for your dog to stand up, turn around, and lie down in comfortably."
+                },
+                {
+                  "step": "Introduce the crate as a safe, positive space by placing a bed or blanket inside and offering treats."
+                },
+                {
+                  "step": "Gradually increase the time your dog spends in the crate while supervising."
+                },
+                {
+                  "step": "Take your dog out to the potty area immediately after letting them out of the crate."
+                },
+                {
+                  "step": "Reward with praise and treats when they go potty in the right spot."
+                }
+              ]
             }
           ],
+          "tip": "Bring a toy or chew to the potty spot so your dog feels relaxed. This can help speed up the process.",
+          "warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
+        },
+        {
+          "lessonPartID": "4",
+          "title": "Handling Indoor Accidents",
+          "finished": false,
+          "lessonInfo": [
+            {
+              "partID": "0",
+              "partType": "text",
+              "title": "Explanation:",
+              "text": "Accidents happen, especially in the early stages of potty training. How you handle these accidents can either help or hinder the training process."
+            },
+            {
+              "partID": "1",
+              "partType": "list",
+              "title": "Step-by-Step Guide:",
+              "list": [
+                {
+                  "step": "If you catch your dog in the act, calmly interrupt them by clapping or saying 'no.'"
+                },
+                {
+                  "step": "Immediately take your dog outside to their potty area."
+                },
+                {
+                  "step": "If they finish going potty outside, reward them with praise and a treat."
+                },
+                {
+                  "step": "Clean up any accidents indoors with an enzyme-based cleaner to remove all scent, as leftover smells may encourage repeat accidents."
+                }
+              ]
+            }
+          ],
+          "tip": "Bring a toy or chew to the potty spot so your dog feels relaxed. This can help speed up the process.",
           "warning": "Avoid changing the potty spot too soon, as this can confuse your dog and slow down their progress."
         }
       ]

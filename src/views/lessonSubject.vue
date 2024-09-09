@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import lessonComp from "@/components/lessonComp.vue";
+import progressComp from "@/components/progressComp.vue";
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 import {
@@ -13,6 +14,7 @@ import {
 } from "@ionic/vue";
 import jsonData from "../data/tempData.json";
 import { computed } from "vue";
+const contentRef = ref(null);
 const route = useRoute();
 const lessonId = route.params.id;
 const lessonPage = ref(1);
@@ -22,10 +24,33 @@ const specificData = computed(() =>
     (x) => x.lessonPartID === lessonPage.value.toString()
   )
 );
+const nextLesson = () => {
+  if (lessonPage.value < lessonData.lessonPart.length) {
+    specificData.value.finished = true;
+    contentRef.value.$el.scrollToTop();
+    lessonPage.value++;
+  }
+};
+const nextLessonCheck = () => {
+  if (
+    lessonPage.value < lessonData.lessonPart.length &&
+    specificData.value.finished == true
+  ) {
+    specificData.value.finished = true;
+    contentRef.value.$el.scrollToTop();
+    lessonPage.value++;
+  }
+};
+const previousLesson = () => {
+  if (lessonPage.value > 1) {
+    contentRef.value.$el.scrollToTop();
+    lessonPage.value--;
+  }
+};
 </script>
 <template>
   <ion-page>
-    <ion-content :fullscreen="true">
+    <ion-content ref="contentRef" :fullscreen="true">
       <ion-header :translucent="true">
         <ion-toolbar>
           <ion-buttons>
@@ -35,27 +60,28 @@ const specificData = computed(() =>
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
-      <div class="grid h-12">
-        <div class="flex gap-12 justify-center relative">
-          <div v-for="item in lessonData.lessonPart">
-            <div
-              v-if="item.lessonPartID == lessonPage"
-              class="bg-blue-500 w-5 h-5 rounded-full"
-            ></div>
-            <div class="bg-blue-200 w-5 h-5 rounded-full" v-else></div>
-          </div>
-        </div>
-      </div>
+      <progressComp
+        :lessonData="lessonData"
+        :lessonPage="lessonPage"
+        @nextPage="nextLessonCheck"
+        @previousPage="previousLesson"
+      />
       <lessonComp :data="specificData" />
       <div class="grid">
         <ion-button
+          v-if="lessonPage < lessonData.lessonPart.length"
           @click="
-            lessonPage++;
-            console.log(lessonPage);
+            nextLesson();
+            console.log(lessonData.lessonPart.length);
           "
           class="font-bold place-self-center w-56 m-5"
           >Next Lesson</ion-button
         >
+        <RouterLink class="place-self-center" v-else to="/home">
+          <ion-button default-href="/" class="font-bold w-56 m-5"
+            >Finish</ion-button
+          >
+        </RouterLink>
       </div>
     </ion-content>
   </ion-page>
