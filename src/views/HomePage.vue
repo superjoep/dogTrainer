@@ -9,7 +9,7 @@
         </ion-toolbar>
       </ion-header>
       <div class="grid font-bold text-2xl mt-5">Pick a training</div>
-      <div v-for="item in jsonData.puppyTrainingCourses">
+      <div v-for="item in jsonData.puppyTrainingCourses" :key="item.completed">
         <trainingComp :data="item" />
       </div>
     </ion-content>

@@ -18,21 +18,59 @@ const contentRef = ref(null);
 const route = useRoute();
 const lessonId = route.params.id;
 const lessonPage = ref(1);
+let forwardBtn = ref(true);
+let backwardBtn = ref(true);
+
+//finds the lessondata based on the lessonID
 let lessonData = jsonData.lessons.find((x) => x.id === lessonId);
+//finds the correct lesson within the lessonData based on the value of lessonPage
 const specificData = computed(() =>
-  lessonData.lessonPart.find(
+  lessonData?.lessonPart.find(
     (x) => x.lessonPartID === lessonPage.value.toString()
   )
 );
-const nextLesson = () => {
-  if (lessonPage.value < lessonData.lessonPart.length) {
-    specificData.value.finished = true;
-    contentRef.value.$el.scrollToTop();
-    lessonPage.value++;
+// finds the course to add the amount of finished lessons
+const addFinished = computed(() =>
+  jsonData.puppyTrainingCourses.find((x) => x.id === lessonData?.id)
+);
+//calculates and adds the amount of finished lessons
+const amountFinished = () => {
+  let amount = 0;
+  lessonData?.lessonPart.forEach((x) => {
+    if (x.finished == true) {
+      amount++;
+    }
+  });
+  addFinished.value.completed = amount.toString();
+};
+//checks if forward and backward buttons are active or not
+const checkActive = () => {
+  if (lessonPage.value > 1) {
+    backwardBtn.value = false;
+  } else {
+    backwardBtn.value = true;
+  }
+  if (
+    lessonPage.value < lessonData.lessonPart.length &&
+    specificData.value.finished == true
+  ) {
+    forwardBtn.value = false;
+  } else {
+    forwardBtn.value = true;
   }
 };
-const nextLessonCheck = () => {
-  if (
+//goes to next lesson if possible
+const nextLesson = (check = false) => {
+  if (!check) {
+    if (
+      lessonPage.value < lessonData.lessonPart.length ||
+      specificData.value.finished == true
+    ) {
+      specificData.value.finished = true;
+      contentRef.value.$el.scrollToTop();
+      lessonPage.value++;
+    }
+  } else if (
     lessonPage.value < lessonData.lessonPart.length &&
     specificData.value.finished == true
   ) {
@@ -40,13 +78,25 @@ const nextLessonCheck = () => {
     contentRef.value.$el.scrollToTop();
     lessonPage.value++;
   }
+  amountFinished(0);
+  checkActive();
 };
+//goes to previous lesson if possible
 const previousLesson = () => {
   if (lessonPage.value > 1) {
+    forwardBtn.value = false;
     contentRef.value.$el.scrollToTop();
     lessonPage.value--;
+
+    checkActive();
   }
 };
+//when entire lesson is finished set everything on done
+const finished = () => {
+  specificData.value.finished = true;
+  amountFinished();
+};
+checkActive();
 </script>
 <template>
   <ion-page>
@@ -63,7 +113,9 @@ const previousLesson = () => {
       <progressComp
         :lessonData="lessonData"
         :lessonPage="lessonPage"
-        @nextPage="nextLessonCheck"
+        :forward="forwardBtn"
+        :backward="backwardBtn"
+        @nextPage="nextLesson(true)"
         @previousPage="previousLesson"
       />
       <lessonComp :data="specificData" />
@@ -77,7 +129,12 @@ const previousLesson = () => {
           class="font-bold place-self-center w-56 m-5"
           >Next Lesson</ion-button
         >
-        <RouterLink class="place-self-center" v-else to="/home">
+        <RouterLink
+          @click="finished()"
+          class="place-self-center"
+          v-else
+          to="/home"
+        >
           <ion-button default-href="/" class="font-bold w-56 m-5"
             >Finish</ion-button
           >
